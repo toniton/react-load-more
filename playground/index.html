@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Load More Playground</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js-bundle/minified.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.min.js"></script>
+
+    <script type="systemjs-importmap" src="systemjs.config.json"></script>
+    <script>
+        System.defaultJSExtensions = true;
+        System.import('../.playground/index.js').catch(function (err) { console.error(err); });
+    </script>
+</head>
+
+<body>
+    <div id="app">Loading AppComponent content here ...</div>
+</body>
+
+</html>

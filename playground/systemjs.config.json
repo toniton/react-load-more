@@ -1,0 +1,22 @@
+{
+  "paths": {
+    "npm:": "../node_modules/"
+  },
+  "imports": {
+    "react": "../node_modules/react/umd/react.production.min.js",
+    "react-dom": "../node_modules/react-dom/umd/react-dom.production.min.js",
+    "react-load-more": "../dist"
+  },
+  "packages": {
+    ".": {
+      "defaultExtension": "js"
+    },
+    "../.playground/src/": {
+      "defaultExtension": "js"
+    },
+    "react-load-more": {
+      "main": "react-load-more.min.js",
+      "defaultExtension": "js"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../.playground",
+        "jsx": "react",
+        "rootDir": "./",
+        "sourceMap": false,
+        "module": "system"
+    },
+    "include": [
+        "/**/*.tsx",
+        "/**/*.ts"
+    ]
+}
