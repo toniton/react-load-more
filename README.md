@@ -4,13 +4,13 @@ This is a react hook for loading more content on scroll to bottom of an element 
 ## Setup Instructions
  - With [React](http://nodejs.org) [installed](http://nodejs.org/en/download), add `react-load-more` dependency to your project.
     ```sh
-    $ npm install react-load-more
+    $ npm install react-load-more-hook
     ```
 
 ## Usage
 Import the library in the file you want to use it
 ```js 
-    import { useloadMore } from 'react-load-more';
+    import { useloadMore } from 'react-load-more-hook';
 ```
 
 Create a reference to the container that will trigger the load more when it is scrolled to the bottom
