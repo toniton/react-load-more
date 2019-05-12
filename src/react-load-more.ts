@@ -1,8 +1,10 @@
-import { useState, useEffect,  Dispatch, SetStateAction, MutableRefObject } from 'react'
+/// <reference path="../index.d.ts" />
+'use strict';
+import { useState, useEffect, Dispatch, SetStateAction, MutableRefObject } from 'react'
 
 export type UseLoadMore = [boolean, Dispatch<SetStateAction<boolean>>]
 
-export const useloadMore = (
+export const useLoadMore = (
   callback: () => void,
   componentRef?: MutableRefObject<HTMLElement>
 ): UseLoadMore => {

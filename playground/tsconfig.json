@@ -1,14 +1,18 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
-        "outDir": "../.playground",
         "jsx": "react",
-        "rootDir": "./",
+        "baseUrl": ".",
+        "outDir": "../.playground",
+        "rootDir": ".",
         "sourceMap": false,
-        "module": "system"
+        "module": "system",
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": [
-        "/**/*.tsx",
-        "/**/*.ts"
+        "**/*.tsx",
+        "**/*.ts"
     ]
 }

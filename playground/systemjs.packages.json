@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "../.playground/src/": {
+      "defaultExtension": "js"
+    },
+    "react-load-more": {
+      "main": "react-load-more.min.js",
+      "defaultExtension": "js"
+    }
+  }
+}

@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "This is a react hook to help you implement infinite scroll or load more feature on scroll to bottom of a page or element.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc && grunt",
+    "build:watch": "tsc -w && grunt watch",
     "test": "npm run test",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
-    "playground": "concurrently \"npm run build:watch\" \"npm run playground:build\" \"npm run lite\""
+    "playground": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\""
   },
   "keywords": [
     "Infinite",
@@ -21,13 +23,17 @@
   "author": "Toniton",
   "license": "MIT",
   "devDependencies": {
+    "@babel/plugin-transform-modules-systemjs": "^7.4.4",
+    "@types/prop-types": "^15.7.1",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
     "concurrently": "^4.1.0",
     "core-js-bundle": "^3.0.1",
+    "eslint": "^5.16.0",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
     "lite-server": "^2.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
