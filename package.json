@@ -1,6 +1,6 @@
 {
   "name": "react-load-more-hook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a react hook to help you implement infinite scroll or load more feature on scroll to bottom of a page or element.",
   "main": "index.js",
   "types": "index.d.ts",
