@@ -1,6 +1,15 @@
-define(["require", "exports", "react"], function (require, exports, react_1) {
+(function (factory) {
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
+    }
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "react"], factory);
+    }
+})(function (require, exports) {
     "use strict";
     exports.__esModule = true;
+    var react_1 = require("react");
     exports.useLoadMore = function (callback, componentRef) {
         var _a = react_1.useState(false), isLoadingMore = _a[0], setIsLoadingMore = _a[1];
         var setIsLoadingMoreOnScroll = function (ref) { return function () {
@@ -26,5 +35,6 @@ define(["require", "exports", "react"], function (require, exports, react_1) {
         }, [isLoadingMore]);
         return [isLoadingMore, setIsLoadingMore];
     };
+    exports["default"] = { useLoadMore: exports.useLoadMore };
 });
-//# sourceMappingURL=react-load-more.js.map
+//# sourceMappingURL=react-load-more-hook.js.map

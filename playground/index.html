@@ -12,16 +12,14 @@
     <script src="node_modules/zone.js/dist/zone.js"></script>
 
     <script type="systemjs-importmap" src="systemjs.imports.json"></script>
-    <script type="systemjs-packagemap" src="systemjs.packages.json"></script>
     <script src="node_modules/systemjs/dist/system.min.js"></script>
-    <script src="node_modules/systemjs/dist/extras/amd.js"></script>
+    <!-- <script src="node_modules/systemjs/dist/extras/amd.js"></script> -->
+    <script src="node_modules/systemjs/dist/extras/global.min.js"></script>
     <script src="node_modules/systemjs/dist/extras/named-exports.min.js"></script>
-    <!-- <script src="node_modules/systemjs/dist/extras/named-register.min.js"></script> -->
+    <script src="node_modules/systemjs/dist/extras/named-register.min.js"></script>
     <script src="node_modules/systemjs/dist/extras/transform.min.js"></script>
 
     <script>
-        System.__defaultOnly = true
-        require = requirejs = System.require
         var systemResolve = System.resolve
         System.resolve = function (name, parent) {
             return Promise.resolve(systemResolve.call(this, name, parent))

@@ -10,7 +10,7 @@ This is a react hook for loading more content on scroll to bottom of an element 
 ## Usage
 Import the library in the file you want to use it
 ```js 
-    import { useloadMore } from 'react-load-more-hook';
+    import { useLoadMore } from 'react-load-more-hook';
 ```
 
 Create a reference to the container that will trigger the load more when it is scrolled to the bottom
@@ -25,7 +25,7 @@ Create a reference to the container that will trigger the load more when it is s
 
 Instantiate your load more hook here
 ```js
-    const [isLoadingMore, setIsLoadingMore] = useloadMore(callback , ref)
+    const [isLoadingMore, setIsLoadingMore] = useLoadMore(callback , ref)
 ```
 
 | Args             | Type          | Default    | Description|

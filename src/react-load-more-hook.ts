@@ -1,5 +1,5 @@
 /// <reference path="../index.d.ts" />
-'use strict';
+// 'use strict';
 import { useState, useEffect, Dispatch, SetStateAction, MutableRefObject } from 'react'
 
 export type UseLoadMore = [boolean, Dispatch<SetStateAction<boolean>>]
@@ -35,3 +35,5 @@ export const useLoadMore = (
 
   return [isLoadingMore, setIsLoadingMore]
 }
+
+export default { useLoadMore };
