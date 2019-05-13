@@ -4,5 +4,5 @@ import { useState, useEffect,  Dispatch, SetStateAction, MutableRefObject } from
 
 declare module 'react-load-more-hook' {
   export type LoadMoreHook = [boolean, Dispatch<SetStateAction<boolean>>]
-  export type useLoadMore = (callback: () => void, ref: MutableRefObject<HTMLElement>) => LoadMoreHook
+  export function useLoadMore(callback: () => void, ref: MutableRefObject<HTMLElement>) : LoadMoreHook
 }
