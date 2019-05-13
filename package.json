@@ -11,7 +11,8 @@
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
-    "playground": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\""
+    "playground:ww": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\"",
+    "playground": "tsc && concurrently \"npm run playground:build\" \"npm run lite\""
   },
   "keywords": [
     "Infinite",
