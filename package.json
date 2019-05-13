@@ -1,6 +1,6 @@
 {
   "name": "react-load-more-hook",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "This is a react hook to help you implement infinite scroll or load more feature on scroll to bottom of a page or element.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -11,7 +11,8 @@
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
-    "playground": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\""
+    "playground:ww": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\"",
+    "playground": "tsc && concurrently \"npm run playground:build\" \"npm run lite\""
   },
   "keywords": [
     "Infinite",
@@ -26,7 +27,6 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-systemjs": "^7.4.4",
     "@types/prop-types": "^15.7.1",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",

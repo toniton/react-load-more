@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "module": "umd",
+        "module": "amd",
         "moduleResolution": "node",
         "sourceMap": true,
         "rootDir": "./src",

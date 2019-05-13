@@ -1,10 +1,10 @@
 import React, { useEffect } from'react'
 // @ts-ignore
-import { useLoadMore } from 'react-load-more-hook';
+import Hook, { useLoadMore } from 'react-load-more-hook';
 
 export const LoadMorePage: React.FC<{}> = () => {
     console.log(React)
-    console.log(useLoadMore)
+    console.log(Hook)
     const [isL, setL ] = useLoadMore(()=>{});
     useEffect(()=>{
         setL(false)
