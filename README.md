@@ -41,5 +41,64 @@ Also you need to manually call `setIsLoadingMore(false)` to tell the hook to not
 ### TLDR;
 [Try out demo here](https://stackblitz.com/edit/react-t3y4pd?file=use-load-more.js)
 
+```js
+    import { useLoadMore } from 'react-load-more-hook';
+
+    const SampleComponent = () => {
+        const loadMoreLogic = () => {
+            ...
+        }
+        const { ref } = useRef(null)
+        const [isLoadingMore, setIsLoadingMore] = useLoadMore(()=>loadMoreLogic() , ref)
+        useEffect(() => {
+            if (isLoadingMore && loadMoreLogicComplete) {
+                setIsLoadingMore(false)
+            }
+        }, [isLoadingMore])
+        return (<ul ref={ref}>
+            ...
+        </ul>)
+    }
+
+```
+
 
 > Cheers, I hope you like what you see.
+
+
+## Contribute?
+
+Yes sure! There's a playground for you.
+
+* Clone the project
+
+* Install dependencies
+```sh
+$ npm install
+```
+
+* Run the playground
+```sh
+$ npm run playground
+```
+
+* You should see a message like
+```sh
+[1]  --------------------------------------
+[1]        Local: http://localhost:3000
+```
+> Goto http://localhost:3000 on your computer.
+
+* Code away directly on the source files.
+
+* Test usages in the playground when you think you're finished
+```
+<project_root_folder>/playground
+```
+* Build by running
+
+```sh
+$ npm run build 
+```
+
+* Create a pull request, voila!
