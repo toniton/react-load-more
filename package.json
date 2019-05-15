@@ -5,14 +5,13 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "tsc && grunt",
-    "build:watch": "tsc -w && grunt watch",
+    "build": "grunt clean && tsc && rollup -c && grunt",
+    "build:watch": "tsc -w && rollup -c -w && grunt watch",
     "test": "npm run test",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "lite": "lite-server",
     "playground:build": "tsc -p playground -w",
-    "playground:ww": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\"",
-    "playground": "tsc && concurrently \"npm run playground:build\" \"npm run lite\""
+    "playground": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\""
   },
   "keywords": [
     "Infinite",
@@ -35,11 +34,13 @@
     "eslint": "^5.16.0",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "lite-server": "^2.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "rollup": "^1.11.3",
     "systemjs": "^3.1.6",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5",

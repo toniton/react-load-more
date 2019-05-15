@@ -1,5 +1,4 @@
 define(["require", "exports", "react"], function (require, exports, react_1) {
-    "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.useLoadMore = function (callback, componentRef) {
         var _a = react_1.useState(false), isLoadingMore = _a[0], setIsLoadingMore = _a[1];
