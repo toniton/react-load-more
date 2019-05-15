@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./dist/react-load-more-hook.min.js')
+module.exports = require('./dist/es6/react-load-more-hook.min.js')
