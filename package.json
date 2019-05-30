@@ -13,6 +13,10 @@
     "playground:build": "tsc -p playground -w",
     "playground": "npm run build && concurrently \"npm run playground:build\" \"npm run lite\""
   },
+  "homepage": "https://github.com/toniton/react-load-more#readme",
+  "bugs": {
+    "url": "https://github.com/toniton/react-load-more/issues"
+  },
   "keywords": [
     "Infinite",
     "Scroll",
